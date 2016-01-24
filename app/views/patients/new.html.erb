@@ -1,0 +1,5 @@
+<%= form_for([@doctor, @patient]) do |f|%>
+  <%=f.label :name%> <%=f.text_field :name%>
+  <%=f.label :diseas%> <%=f.text_field :diseas%>
+  <%=f.submit "sumit patient details"%>
+<%end%>

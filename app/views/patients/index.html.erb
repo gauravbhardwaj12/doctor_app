@@ -1,0 +1,12 @@
+<% if @patients.blank?%>
+<p>no record found</p>
+<%else%>
+	<%@patients.each do |patient|%>
+	<%=patient.name%>
+	<%=patient.diseas%><br/>
+	
+	<%=link_to "Edit patient", edit_doctor_patient_path(@doctor,patient) %>
+	<%end%>
+
+<%end%>
+<%=link_to "new patient", new_doctor_patient_path(@doctor)%>

@@ -1,0 +1,12 @@
+<%@doctors.each do|doctor|%>
+
+Name:<%=doctor.first_name%></br>
+Fees: <%=doctor.fees%></br>
+<%=link_to "create department", doctor_departments_path(doctor)%>
+<%=link_to "show", doctor_path(doctor)%>
+<%=link_to "patient", doctor_patients_path(doctor)%>
+<%=link_to "edit", edit_doctor_path(doctor)%>
+<%=link_to "destroy doctor", doctor_path(doctor), method: :delete %>
+
+<%end%>
+<%= link_to "create new" ,new_doctor_path%>
